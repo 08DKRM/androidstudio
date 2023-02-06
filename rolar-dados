@@ -1,0 +1,29 @@
+package com.bms.rolardadosdanilo
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val botaoRolar = findViewById<Button>(R.id.btnRolar)
+        //instanciando um obj (o btnRolar)
+
+        botaoRolar.setOnClickListener {
+            rolarDados(6)
+        }
+
+
+    }
+
+    private fun rolarDados(lados: Int) {
+        val rolar = (1..lados).random()
+        val resultado = findViewById<TextView>(R.id.txtResult)
+
+        resultado.text = rolar.toString()
+    }
+}
