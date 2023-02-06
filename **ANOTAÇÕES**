@@ -1,0 +1,2 @@
+val botaoRolar = findViewById<Button>(R.id.btnRolar)
+         //instanciando um obj (o btnRolar)
