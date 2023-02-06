@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import androidx.core.util.toRange
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,4 +27,8 @@ class MainActivity : AppCompatActivity() {
 
         resultado.text = rolar.toString()
     }
+}
+
+private fun IntRange.random(): Any {
+
 }
