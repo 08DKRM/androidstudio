@@ -12,7 +12,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val botaoRolar = findViewById<Button>(R.id.btnRolar)
-        //instanciando um obj (o btnRolar)
 
         botaoRolar.setOnClickListener {
             rolarDados(6)
