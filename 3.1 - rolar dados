@@ -4,17 +4,26 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import androidx.core.util.toRange
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val botaoRolar = findViewById<Button>(R.id.btnRolar)
+        val botaoD6 = findViewById<Button>(R.id.btnD6)
+        val botaoD12 = findViewById<Button>(R.id.btnD12)
+        val botaoD20 = findViewById<Button>(R.id.btnD20)
 
-        botaoRolar.setOnClickListener {
+        botaoD6.setOnClickListener {
             rolarDados(6)
+        }
+
+        botaoD12.setOnClickListener {
+                rolarDados(12)
+        }
+
+        botaoD20.setOnClickListener {
+            rolarDados(20)
         }
 
 
@@ -28,6 +37,5 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
-private fun IntRange.random(): Any {
+private fun IntRange.random(): Any {}
 
-}
