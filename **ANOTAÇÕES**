@@ -4,3 +4,5 @@ val valor = binding.txtiTotal.text.toString().toDouble() //transformando o valor
         val opcaoSelecionada = binding.rbGroup.checkedRadioButtonId //vai checar qual opcao esta selecionada
         val arredondar = binding.arredondar.isChecked //vai checar se o switch está ativado
         val gorjetaFormatada = NumberFormat.getCurrencyInstance().format(gorjeta) //recupera moeda local de onde se está usando o app e formata o valor
+        val arredondar = binding.arredondar.isChecked
+        //ou seja é uma val do tipo Boolean
