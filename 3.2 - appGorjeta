@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
         }
         var gorjeta = valor * porcentagem
         val arredondar = binding.arredondar.isChecked
-        //ou seja é uma val do tipo Boolean
         if(arredondar){
             gorjeta = ceil(gorjeta)
         }
