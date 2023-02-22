@@ -1,0 +1,56 @@
+package com.example.appgorjeta2405a
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import com.bms.appgorjeta_danilo.R
+import com.bms.appgorjeta_danilo.databinding.ActivityMainBinding
+import java.lang.Math.ceil
+import java.text.NumberFormat
+
+class MainActivity : AppCompatActivity() {
+    lateinit var binding: ActivityMainBinding
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        binding.btnCalcular.setOnClickListener {
+            calcularGorjeta()
+        }
+
+
+
+    }
+
+    private fun calcularGorjeta() {
+        val valor = binding.txtiTotal.text.toString().toDouble()
+        val opcaoSelecionada = binding.rbGroup.checkedRadioButtonId
+        val porcentagem = when(opcaoSelecionada){
+            R.id.rbOtimo -> 0.30
+            R.id.rbBom -> 0.20
+            else -> 0.15
+        }
+        var gorjeta = valor * porcentagem
+        val arredondar = binding.arredondar.isChecked
+        //ou seja é uma val do tipo Boolean
+        if(arredondar){
+            gorjeta = ceil(gorjeta)
+        }
+
+        val gorjetaFormatada = NumberFormat.getCurrencyInstance().format(gorjeta)
+        binding.txtCoisa.text = gorjetaFormatada
+
+
+
+    }
+
+
+}
+
+private operator fun Any.times(porcentagem: Double): Double {
+
+}
+
+private fun String.toDouble(): Any {
+
+}
