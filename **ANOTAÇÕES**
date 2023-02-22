@@ -1,2 +1,6 @@
 val botaoRolar = findViewById<Button>(R.id.btnRolar)
          //instanciando um obj (o btnRolar)
+val valor = binding.txtiTotal.text.toString().toDouble() //transformando o valor total em money
+        val opcaoSelecionada = binding.rbGroup.checkedRadioButtonId //vai checar qual opcao esta selecionada
+        val arredondar = binding.arredondar.isChecked //vai checar se o switch está ativado
+        val gorjetaFormatada = NumberFormat.getCurrencyInstance().format(gorjeta) //recupera moeda local de onde se está usando o app e formata o valor
